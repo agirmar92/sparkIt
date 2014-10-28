@@ -7,8 +7,8 @@ Runs on (tested on):
 - ✓ Mac OS (Mavericks)
 - ✓ Linux (Ubuntu 14.04 and Ubuntu Server 12.04)
 
-## Travis picture dawg
-[![Build Status](http://oi57.tinypic.com/swsbap.jpg)](https://travis-ci.org/agirmar92/sparkIt)
+## Travis build status
+[![Build Status](https://travis-ci.org/agirmar92/sparkIt.svg?branch=master)](https://travis-ci.org/agirmar92/sparkIt)
 
 ## Screenshots
 
