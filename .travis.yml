@@ -7,3 +7,10 @@ jdk:
 script:
   - ./gradlew check
   - ./gradlew seleniumXvfb
+
+deploy:
+  provider: heroku
+  api_key: "a7c08c05-90e8-4709-89f5-c9982b296f84"
+  app: sickapp
+  skip_cleanup: true
+  strategy: git
