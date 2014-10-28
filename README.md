@@ -12,6 +12,7 @@ Runs on (tested on):
 index.html                | specific.html
 --------------------------|-------------------------------
 ![random](img/random.png) | ![specific](img/specific.png)
+[![Build Status](http://oi57.tinypic.com/swsbap.jpg)](https://travis-ci.org/agirmar92/sparkIt)
 
 ## Getting started
 
