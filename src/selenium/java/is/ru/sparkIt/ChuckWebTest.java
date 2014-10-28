@@ -28,7 +28,7 @@ public class ChuckWebTest {
         if(port == null) {
             port = "4567";
         }
-        baseUrl = "http://localhost:" + port;
+        baseUrl = "http://sickapp.herokuapp.com";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
