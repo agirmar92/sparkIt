@@ -3,13 +3,22 @@ jdk:
 - openjdk7
 - oraclejdk7
 
+env:
+  - TERM=dumb
+
+install:
+- wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+- heroku labs:enable pipelines
+- heroku plugins:install git://github.com/heroku/heroku-pipeline.git
+
 script:
 - "./gradlew check"
-- "./gradlew seleniumXvfb"
 
 deploy:
   provider: heroku
   api_key:
     secure: CFWyVdcd+MhMFG7F2P7PkKDw53/Kf+nnue53YmruhAuATCAqa1FBbS6JxPsnX3XzQaWMiRV1wErilPqiusZqhjX4S9zJYtvgukjbpmciHyUafWKZAh0NIywVxyqmOc7UMALo3WgakCLwNAotbu2KG4DWy5VToC40MqkZkZZU/dw=
-  app: aegirprufa
+  app: aegirproduct
   strategy: git
+  on:
+    repo: agirmar92/sparkIt
