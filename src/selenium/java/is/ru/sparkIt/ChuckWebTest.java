@@ -26,7 +26,7 @@ public class ChuckWebTest {
         driver = new FirefoxDriver();
         port = System.getenv("PORT");
         if(port == null) {
-            port = "4567";
+            port = "4572";
         }
         baseUrl = "http://localhost:" + port;
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
