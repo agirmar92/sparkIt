@@ -2,26 +2,23 @@ language: java
 jdk:
 - openjdk7
 - oraclejdk7
-
 env:
-  - TERM=dumb
-
+- TERM=dumb
 install:
 - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 - heroku labs:enable pipelines
 - heroku plugins:install git://github.com/heroku/heroku-pipeline.git
-
 before_script:
 - "./gradlew build"
-
 script:
 - "./gradlew check"
-
 deploy:
   provider: heroku
   api_key:
-    secure: CFWyVdcd+MhMFG7F2P7PkKDw53/Kf+nnue53YmruhAuATCAqa1FBbS6JxPsnX3XzQaWMiRV1wErilPqiusZqhjX4S9zJYtvgukjbpmciHyUafWKZAh0NIywVxyqmOc7UMALo3WgakCLwNAotbu2KG4DWy5VToC40MqkZkZZU/dw=
+    secure: B/keF11I0rsOlsSsZnh2lKNhWes80M23u2n+TQ0FGxHnD4RUrVnIChzw+ytyjzv1ub0joNN5OrLazHDycmOfQCvBSRSLx2GaesRUR0kmwTnSz+m4PWmIXhd/AZ34atIDo5VQ3lxfCnCd3c5OqFfimJJ1cO8KpQifD1TAL71tedU=
   app: aegirproduct
   strategy: git
   on:
     repo: agirmar92/sparkIt
+after_deploy:
+- "./bin/test_and_promote"
