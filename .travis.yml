@@ -1,16 +1,15 @@
 language: java
-
 jdk:
-  - openjdk7
-  - oraclejdk7
+- openjdk7
+- oraclejdk7
 
 script:
-  - ./gradlew check
-  - ./gradlew seleniumXvfb
+- "./gradlew check"
+- "./gradlew seleniumXvfb"
 
 deploy:
   provider: heroku
-  api_key: "a7c08c05-90e8-4709-89f5-c9982b296f84"
-  app: sickapp
-  skip_cleanup: true
+  api_key:
+    secure: CFWyVdcd+MhMFG7F2P7PkKDw53/Kf+nnue53YmruhAuATCAqa1FBbS6JxPsnX3XzQaWMiRV1wErilPqiusZqhjX4S9zJYtvgukjbpmciHyUafWKZAh0NIywVxyqmOc7UMALo3WgakCLwNAotbu2KG4DWy5VToC40MqkZkZZU/dw=
+  app: aegirprufa
   strategy: git
