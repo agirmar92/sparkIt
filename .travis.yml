@@ -5,6 +5,7 @@ jdk:
 - oraclejdk7
 env:
 - TERM=dumb
+- API_KEY=B/keF11I0rsOlsSsZnh2lKNhWes80M23u2n+TQ0FGxHnD4RUrVnIChzw+ytyjzv1ub0joNN5OrLazHDycmOfQCvBSRSLx2GaesRUR0kmwTnSz+m4PWmIXhd/AZ34atIDo5VQ3lxfCnCd3c5OqFfimJJ1cO8KpQifD1TAL71tedU=
 install:
 - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 - heroku labs:enable pipelines
@@ -16,7 +17,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: B/keF11I0rsOlsSsZnh2lKNhWes80M23u2n+TQ0FGxHnD4RUrVnIChzw+ytyjzv1ub0joNN5OrLazHDycmOfQCvBSRSLx2GaesRUR0kmwTnSz+m4PWmIXhd/AZ34atIDo5VQ3lxfCnCd3c5OqFfimJJ1cO8KpQifD1TAL71tedU=
+    secure: API_KEY
   app: aegirproduct
   strategy: git
   on:
