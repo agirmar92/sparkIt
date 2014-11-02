@@ -11,6 +11,9 @@ install:
 - heroku labs:enable pipelines
 - heroku plugins:install git://github.com/heroku/heroku-pipeline.git
 
+before_script:
+- "./gradlew build"
+
 script:
 - "./gradlew check"
 
