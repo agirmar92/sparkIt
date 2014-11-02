@@ -9,6 +9,7 @@ public class ChuckWeb implements SparkApplication {
         staticFileLocation("/public");
         SparkApplication chuckweb = new ChuckWeb();
         String port = System.getenv("PORT");
+        setPort(4572);
         if (port != null) {
             setPort(Integer.valueOf(port));
         }
