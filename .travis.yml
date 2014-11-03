@@ -1,5 +1,4 @@
 language: java
-#
 jdk:
 - openjdk7
 - oraclejdk7
@@ -16,7 +15,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-  	secure: B/keF11I0rsOlsSsZnh2lKNhWes80M23u2n+TQ0FGxHnD4RUrVnIChzw+ytyjzv1ub0joNN5OrLazHDycmOfQCvBSRSLx2GaesRUR0kmwTnSz+m4PWmIXhd/AZ34atIDo5VQ3lxfCnCd3c5OqFfimJJ1cO8KpQifD1TAL71tedU=
+    secure: LZJs4TACqEuhk9+pKTsUMklbrL8XpoW/aM9bwsF76m3qo9wHFrC/F2eprn2OV9wncvHkaDNULD3Osc95fiDdqdXQHKlqXz7n6uZ0E6TlW2O7DgmSad1DeW5cuvt82N0io9g8kRBILmFkKq+ngl3k4hL6lEc8wdcIrStk/5SsvOM=
   app: aegirproduct
   strategy: git
   on:
