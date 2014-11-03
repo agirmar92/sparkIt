@@ -45,6 +45,12 @@ public class ChuckWebTest {
     }
 
     @Test
+    public void shouldFail() {
+        driver.get(baseUrl + "/");
+        assertEquals("Kisan mikla", driver.getTitle());
+    }
+
+    @Test
     public void assertTitle() {
         driver.get(baseUrl + "/");
         assertEquals("Chuck Norris Jokes", driver.getTitle());
